@@ -40,8 +40,7 @@ fs.readFile(filename, (err, data) => { //læser data og printer det ud
             console.log(`${email}`);
             console.log("You have a user here. The email is: " + `${email}`);
         } else{
-            var pushIt = members.member.push(data);
-            fs.appendFile(filename, pushIt, (err) => {  //tilføjer information i filen
+            fs.appendFile(filename, json, (err) => {  //tilføjer information i filen
                 if(err) {
                     throw err;
                 }
